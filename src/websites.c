@@ -22,7 +22,7 @@ websites_init()
                         vimeo,
                         xfire,
                         yahoo_video,
-			            imageview,
+                        imageview,
                         twitter,
                         youtube;
 
