@@ -20,7 +20,7 @@
 
 WebsiteInfo imageview= {
     "imageview",
-    "^http://.*\\.(jpg|png|gif|jpeg|xpm|bmp)$",
+    "(?:([^:/?#]+):)?(?://([^/?#]*))?([^?#]*\.(?:jpg|gif|png))(?:\?([^#]*))?(?:#(.*))?",
     NULL,
     NULL
 };
