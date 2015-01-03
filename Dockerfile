@@ -9,5 +9,5 @@ FROM phusion/baseimage:latest
 ENV HOME /root
 
 RUN apt-get update && apt-get install pidgin-dev libpurple-dev git libwebkit-dev libcurl3-dev checkinstall -y
-RUN cd opt && git clone https://github.com/jmeichle/pidgin-embeddedvideo-imageview
+RUN cd opt #&& git clone https://github.com/akovalyov/pidgin-embedded
 ADD . /opt

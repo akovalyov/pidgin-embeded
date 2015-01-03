@@ -20,7 +20,7 @@ libglib2.0-dev
 libcurl3-dev
 libwebkit-dev >= 1.1.12
 
-On Ubuntu/Debian, dependancies can be installed via:
+On Ubuntu/Debian, dependencies can be installed via:
 
 ```
 sudo apt-get install pidgin-dev libglib2.0-dev libcurl3-dev libwebkit-dev
