@@ -255,12 +255,12 @@ videoframes_generate_page(WebsiteInfo *website, GString *url)
     gchar *filename;
     gint file = g_file_open_tmp(NULL, &filename, NULL);
     ssize_t tmp = write(file, "<html>\n<head></head>\n<body>\n", 28);
-    // if(!strcmp(website->id,"imageview")){
-	    // gchar buf_[2048] ;
-	    // sprintf(buf_,"<img src=\"%s\" />",url->str);
-	    // tmp = write(file, buf_,strlen(buf_));
-    // }else
-	tmp = write(file, embed, strlen(embed));
+    /*if(!strcmp(website->id,"imageview")){
+        gchar buf_[2048] ;
+        sprintf(buf_,"<img src=\"%s\" width=\"500\" />",url->str);
+        tmp = write(file, buf_,strlen(buf_));
+    }else*/
+        tmp = write(file, embed, strlen(embed));
     tmp = write(file, "\n</body>\n</html>", 16);
     close(file);
 
