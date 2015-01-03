@@ -402,7 +402,7 @@ libwebsites_la-youtube.lo: youtube.c
 #	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libwebsites_la_CFLAGS) $(CFLAGS) -c -o libwebsites_la-youtube.lo `test -f 'youtube.c' || echo '$(srcdir)/'`youtube.c
 
 libwebsites_la-twitter.lo: twitter.c
-	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libwebsites_la_CFLAGS) $(CFLAGS) -MT libwebsites_la-twitter.lo -MD -MP -MF $(DEPDIR)/libwebsites_la-twitter.Tpo -c -o libwebsites_la-twitter.lo `test -f 'youtube.c' || echo '$(srcdir)/'`twitter.c
+	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libwebsites_la_CFLAGS) $(CFLAGS) -MT libwebsites_la-twitter.lo -MD -MP -MF $(DEPDIR)/libwebsites_la-twitter.Tpo -c -o libwebsites_la-twitter.lo `test -f 'twitter.c' || echo '$(srcdir)/'`twitter.c
 	$(am__mv) $(DEPDIR)/libwebsites_la-twitter.Tpo $(DEPDIR)/libwebsites_la-twitter.Plo
 #	source='twitter.c' object='libwebsites_la-twitter.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
