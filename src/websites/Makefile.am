@@ -3,7 +3,7 @@ PLUGIN_CFLAGS = @GLIB_CFLAGS@ @PIDGIN_CFLAGS@ @WEBKIT_CFLAGS@ @LIBCURL_CFLAGS@
 noinst_LTLIBRARIES = libwebsites.la
 libwebsites_la_SOURCES =    \
     collegehumor.c          \
-    imageview.c 	    \
+    imageview.c 	        \
     dailymotion.c           \
     google-video.c          \
     metacafe.c              \
@@ -14,6 +14,7 @@ libwebsites_la_SOURCES =    \
     vimeo.c                 \
     xfire.c                 \
     yahoo-video.c           \
+    twitter.c               \    
     youtube.c
 libwebsites_la_CFLAGS = $(PLUGIN_CFLAGS) -I..
 
