@@ -2,8 +2,8 @@
 
 WebsiteInfo twitter = {
     "twitter",
-    "/^https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(es)?\/(\d+)$/",
-    "https://api.twitter.com/1.1/statuses/oembed.json?url=https://twitter.com/$2/status/$4",
+    "(?P<domain>https://.*twitter\\.com/)(?P<user>.+)/(?P<status>(status|statuses))/(?P<id>.+)",
+    "https://api.twitter.com/1.1/statuses/oembed.json?url=https://twitter.com/%USER%/status/%STATUS%",
     NULL
 };
 
