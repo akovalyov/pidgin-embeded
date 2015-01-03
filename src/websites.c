@@ -22,7 +22,8 @@ websites_init()
                         vimeo,
                         xfire,
                         yahoo_video,
-			imageview,
+			            imageview,
+                        twitter,
                         youtube;
 
     /* Initialize the websites list. */
@@ -39,6 +40,7 @@ websites_init()
     list = g_list_append(list, &xfire);
     list = g_list_append(list, &yahoo_video);
     list = g_list_append(list, &imageview);
+    list = g_list_append(list, &twitter);    
     list = g_list_append(list, &youtube);
 }
 
