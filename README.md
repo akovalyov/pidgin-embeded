@@ -1,13 +1,7 @@
 # Version
 
-Fork (currently unversioned) from on a [modified](#Modifications) copy of pidgin-embeddedvideo 1.2
+Forked from https://github.com/jmeichle/pidgin-embeddedvideo-imageview
 
-
-# Modifications
-
-- This repo contains a copy of a modified version of pidgin-embeddedvideo plugin, imported via tarball from: http://geekr.googlecode.com/files/pidgin-embeddedvideo-imageview.tar.gz
-- This modified version includes basic rendering of images in chat windows as well as the underlying video support. More information can be found at http://code.google.com/p/pidgin-embeddedvideo/issues/detail?id=18
-- Modified the regex for the youtube to support parsing of both http and https urls, as the original import only parsed http:// urls
 
 # Todos
 
