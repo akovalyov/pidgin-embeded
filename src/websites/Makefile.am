@@ -14,7 +14,7 @@ libwebsites_la_SOURCES =    \
     vimeo.c                 \
     xfire.c                 \
     yahoo-video.c           \
-    twitter.c               \    
-    youtube.c
+    youtube.c               \    
+    twitter.c
 libwebsites_la_CFLAGS = $(PLUGIN_CFLAGS) -I..
 

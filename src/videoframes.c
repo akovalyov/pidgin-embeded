@@ -255,7 +255,7 @@ videoframes_generate_page(WebsiteInfo *website, GString *url)
     gchar *filename;
     gint file = g_file_open_tmp(NULL, &filename, NULL);
     ssize_t tmp = write(file, "<html>\n<head></head>\n<body>\n", 28);
-    if(!strcmp(website->id,"imageview")){
+    if(!strcmp(website->id,"imageview") && !strcmp(website->id,"twitter")){
 	    gchar buf_[2048] ;
 	    sprintf(buf_,"<img src=\"%s\" />",url->str);
 	    tmp = write(file, buf_,strlen(buf_));

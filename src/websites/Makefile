@@ -49,12 +49,13 @@ libwebsites_la_LIBADD =
 am_libwebsites_la_OBJECTS = libwebsites_la-collegehumor.lo \
 	libwebsites_la-imageview.lo libwebsites_la-dailymotion.lo \
 	libwebsites_la-google-video.lo libwebsites_la-metacafe.lo \
-	libwebsites_la-myspace-video.lo \
+	libwebsites_la-myspace-video.lo \ 
 	libwebsites_la-trilulilu-audio.lo \
 	libwebsites_la-trilulilu-image.lo \
 	libwebsites_la-trilulilu-video.lo libwebsites_la-vimeo.lo \
 	libwebsites_la-xfire.lo libwebsites_la-yahoo-video.lo \
-	libwebsites_la-youtube.lo
+	libwebsites_la-youtube.lo \
+	libwebsites_la-twitter.lo 
 libwebsites_la_OBJECTS = $(am_libwebsites_la_OBJECTS)
 libwebsites_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(libwebsites_la_CFLAGS) \
@@ -206,7 +207,7 @@ PLUGIN_CFLAGS = -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include   -pthread -
 noinst_LTLIBRARIES = libwebsites.la
 libwebsites_la_SOURCES = \
     collegehumor.c          \
-    imageview.c 	    \
+    imageview.c 	        \
     dailymotion.c           \
     google-video.c          \
     metacafe.c              \
@@ -217,7 +218,8 @@ libwebsites_la_SOURCES = \
     vimeo.c                 \
     xfire.c                 \
     yahoo-video.c           \
-    youtube.c
+    youtube.c               \
+    twitter.c
 
 libwebsites_la_CFLAGS = $(PLUGIN_CFLAGS) -I..
 all: all-am
@@ -285,6 +287,7 @@ include ./$(DEPDIR)/libwebsites_la-vimeo.Plo
 include ./$(DEPDIR)/libwebsites_la-xfire.Plo
 include ./$(DEPDIR)/libwebsites_la-yahoo-video.Plo
 include ./$(DEPDIR)/libwebsites_la-youtube.Plo
+include ./$(DEPDIR)/libwebsites_la-twitter.Plo
 
 .c.o:
 	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
@@ -397,6 +400,13 @@ libwebsites_la-youtube.lo: youtube.c
 #	source='youtube.c' object='libwebsites_la-youtube.lo' libtool=yes \
 #	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
 #	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libwebsites_la_CFLAGS) $(CFLAGS) -c -o libwebsites_la-youtube.lo `test -f 'youtube.c' || echo '$(srcdir)/'`youtube.c
+
+libwebsites_la-twitter.lo: twitter.c
+	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libwebsites_la_CFLAGS) $(CFLAGS) -MT libwebsites_la-twitter.lo -MD -MP -MF $(DEPDIR)/libwebsites_la-twitter.Tpo -c -o libwebsites_la-twitter.lo `test -f 'youtube.c' || echo '$(srcdir)/'`twitter.c
+	$(am__mv) $(DEPDIR)/libwebsites_la-twitter.Tpo $(DEPDIR)/libwebsites_la-twitter.Plo
+#	source='twitter.c' object='libwebsites_la-twitter.lo' libtool=yes \
+#	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) \
+#	$(LIBTOOL)  --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libwebsites_la_CFLAGS) $(CFLAGS) -c -o libwebsites_la-twitter.lo `test -f 'twitter.c' || echo '$(srcdir)/'`twtter.c
 
 mostlyclean-libtool:
 	-rm -f *.lo
